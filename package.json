@@ -1,0 +1,30 @@
+{
+  "name": "vuezythemes",
+  "version": "1.0.0",
+  "description": "My dandy Nuxt.js project",
+  "author": "Joe Harrison",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "axios": "^0.19.1",
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-animate-scroll": "^0.1.5",
+    "vue-carousel": "^0.18.0",
+    "vue2-animate": "^2.1.3",
+    "vue2-scrollspy": "^2.3.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}

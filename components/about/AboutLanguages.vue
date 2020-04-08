@@ -1,0 +1,85 @@
+<template>
+  <div class="wrapper">
+    <SectionSubtitle>Languages</SectionSubtitle>
+    <div class="language-row">
+      <div class="language-block">
+        <div class="language-block__title">
+          English
+        </div>
+        <div class="language-block__subtitle">
+          Fluent
+        </div>
+      </div>
+      <div class="progress-wrapper">
+        <div class="progress-bar" />
+      </div>
+    </div>
+    <div class="language-row">
+      <div class="language-block">
+        <div class="language-block__title">
+          Spanish
+        </div>
+        <div class="language-block__subtitle">
+          Intermediate
+        </div>
+      </div>
+      <div class="progress-wrapper">
+        <div class="progress-bar" :style="{ width: '33.33%' }" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import SectionSubtitle from "../shared/SectionSubtitle";
+
+export default {
+  components: {
+    SectionSubtitle
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+
+.wrapper {
+}
+
+.language-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.language-block {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+}
+
+.language-block__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $colorSubtitle;
+  margin-bottom: 0.325rem;
+}
+
+.language-block__subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: lighten($colorSubtitle, 50%);
+}
+
+.progress-wrapper {
+  flex: 1;
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: $colorPrimary;
+}
+</style>
