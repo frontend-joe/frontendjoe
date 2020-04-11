@@ -1,5 +1,5 @@
 <template>
-  <div class="about-wrapper">
+  <div id="about" class="about-wrapper">
     <div v-animate="'slide-up'">
       <carousel :per-page="1" :loop="true" :paginationEnabled="false">
         <slide>
@@ -69,7 +69,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "assets/scss/variables";
 
 .about-wrapper {
@@ -79,6 +79,17 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem 2rem;
+
+  @media (min-width: $screenWidthMd) {
+    padding: 0;
+  }
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
 }
 
 .styled-left {
@@ -124,7 +135,7 @@ export default {
 
 .about-img-wrapper {
   border-radius: 50%;
-  width: 50%;
+  width: 40%;
 
   @media (min-width: $screenWidthMd) {
     background: #e7e7e7;

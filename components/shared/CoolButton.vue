@@ -36,7 +36,6 @@ export default {
   min-width: 85px;
   font-weight: 600;
   font-family: "Poppins";
-  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;

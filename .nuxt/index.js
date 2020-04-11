@@ -11,11 +11,12 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_templatesplugin2594d621_bc5fb0d4 from 'nuxt_plugin_templatesplugin2594d621_bc5fb0d4' // Source: .\\templates.plugin.2594d621.js (mode: 'all')
-import nuxt_plugin_vue2scrollspy_88c5e0b8 from 'nuxt_plugin_vue2scrollspy_88c5e0b8' // Source: ..\\plugins\\vue2-scrollspy (mode: 'client')
-import nuxt_plugin_vuecarousel_6c010c3d from 'nuxt_plugin_vuecarousel_6c010c3d' // Source: ..\\plugins\\vue-carousel (mode: 'client')
-import nuxt_plugin_fontawesome_b8db358e from 'nuxt_plugin_fontawesome_b8db358e' // Source: ..\\plugins\\fontawesome.js (mode: 'all')
-import nuxt_plugin_vueanimatescroll_72d731e1 from 'nuxt_plugin_vueanimatescroll_72d731e1' // Source: ..\\plugins\\vue-animate-scroll.js (mode: 'all')
+import nuxt_plugin_templatesplugin12c46eed_5c5de106 from 'nuxt_plugin_templatesplugin12c46eed_5c5de106' // Source: ./templates.plugin.12c46eed.js (mode: 'all')
+import nuxt_plugin_vue2scrollspy_88c5e0b8 from 'nuxt_plugin_vue2scrollspy_88c5e0b8' // Source: ../plugins/vue2-scrollspy (mode: 'client')
+import nuxt_plugin_vuecarousel_6c010c3d from 'nuxt_plugin_vuecarousel_6c010c3d' // Source: ../plugins/vue-carousel (mode: 'client')
+import nuxt_plugin_fontawesome_b8db358e from 'nuxt_plugin_fontawesome_b8db358e' // Source: ../plugins/fontawesome.js (mode: 'all')
+import nuxt_plugin_vueanimatescroll_72d731e1 from 'nuxt_plugin_vueanimatescroll_72d731e1' // Source: ../plugins/vue-animate-scroll.js (mode: 'all')
+import nuxt_plugin_vuescrollto_44ce9a1c from 'nuxt_plugin_vuescrollto_44ce9a1c' // Source: ../plugins/vue-scrollto.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -149,8 +150,8 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_templatesplugin2594d621_bc5fb0d4 === 'function') {
-    await nuxt_plugin_templatesplugin2594d621_bc5fb0d4(app.context, inject)
+  if (typeof nuxt_plugin_templatesplugin12c46eed_5c5de106 === 'function') {
+    await nuxt_plugin_templatesplugin12c46eed_5c5de106(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_vue2scrollspy_88c5e0b8 === 'function') {
@@ -167,6 +168,10 @@ async function createApp (ssrContext) {
 
   if (typeof nuxt_plugin_vueanimatescroll_72d731e1 === 'function') {
     await nuxt_plugin_vueanimatescroll_72d731e1(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_vuescrollto_44ce9a1c === 'function') {
+    await nuxt_plugin_vuescrollto_44ce9a1c(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

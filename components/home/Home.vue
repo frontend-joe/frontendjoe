@@ -1,43 +1,19 @@
 <template>
   <div class="home-wrapper">
     <div class="left-wrapper"></div>
-
     <img class="banner-img" src="/images/hello.png" />
-
-    <div v-scroll-spy class="banner-link">
-      <a @click="$scrollTo(1)">
-        Scroll
-      </a>
+    <div class="banner-link">
+      <HomeScrollButton />
     </div>
-
-    <!-- <div class="row">
-        <div class="col-md-7 col-lg-6 styled-col">
-          <div class="left-wrapper" v-scroll-spy="{ offset: 71 }">
-            <div class="banner-title">
-              Joe Harrison
-            </div>
-            <div class="banner-message">
-              Frontend Developer
-            </div>
-            <a class="banner-link" @click="gotoPage">
-              See Recent Work
-            </a>
-          </div>
-        </div>
-        <div class="col-md-5 col-lg-6 styled-col">
-          <img class="banner-img" src="/images/joe.png" />
-        </div>
-      </div> -->
   </div>
 </template>
 
 <script>
+import HomeScrollButton from "./HomeScrollButton";
+
 export default {
-  methods: {
-    gotoPage() {
-      this.$scrollTo(1);
-      console.log("yay!", this.$scrollTo);
-    }
+  components: {
+    HomeScrollButton
   }
 };
 </script>
@@ -117,10 +93,25 @@ export default {
   }
 }
 
+@keyframes banner-link-animation {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .banner-link {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+
+  animation: banner-link-animation 1.375s linear;
 }
 </style>

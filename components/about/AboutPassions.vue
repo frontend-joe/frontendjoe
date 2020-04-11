@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <SectionSubtitle>Passions</SectionSubtitle>
+    <div class="about-subtitle">Passions</div>
     <div class="passions-row">
       <MatIcon class="passions-icon">menu_book</MatIcon>
       <div class="passions-text">

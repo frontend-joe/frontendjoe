@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <SectionSubtitle>Languages</SectionSubtitle>
+    <div class="about-subtitle">Languages</div>
     <div class="language-row">
       <div class="language-block">
         <div class="language-block__title">
@@ -31,13 +31,7 @@
 </template>
 
 <script>
-import SectionSubtitle from "../shared/SectionSubtitle";
-
-export default {
-  components: {
-    SectionSubtitle
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>

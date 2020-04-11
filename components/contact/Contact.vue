@@ -75,11 +75,15 @@ export default {
 @import "assets/scss/variables";
 .contact-wrapper {
   padding: 4rem 0;
-  height: 100vh;
+  height: calc(100vh + 72px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: $screenWidthXxxl) {
+    height: 100vh;
+  }
 }
 
 .animate {

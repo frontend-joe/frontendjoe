@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="skills-title">
+    <div class="about-subtitle">
       Skills
     </div>
     <div class="skills-subtitle">
@@ -52,12 +52,6 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-}
-
-.skills-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 2.5rem;
 }
 
 .skills-subtitle {

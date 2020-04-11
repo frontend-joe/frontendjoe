@@ -45,20 +45,24 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh + 72px);
   position: relative;
 
-  &::before {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 110%;
-    width: 200%;
-    background: #f9f9f9;
-    transform: rotate(-1.5deg);
-    transform-origin: top right;
+  @media (min-width: $screenWidthXxxl) {
+    height: 100vh;
   }
+  //
+  // &::before {
+  //   z-index: -1;
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   height: 110%;
+  //   width: 200%;
+  //   background: #f9f9f9;
+  //   transform: rotate(-1.5deg);
+  //   transform-origin: top right;
+  // }
 }
 
 .portfolio-card {

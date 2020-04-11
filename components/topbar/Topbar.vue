@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :class="{ scrolledDown: scrolledDown }">
     <div class="wrapper-inner">
       <Logo />
       <NavMenu />
@@ -17,6 +17,34 @@ export default {
     NavMenu,
     Logo,
     DownloadButton
+  },
+  data() {
+    return {
+      scrolledDown: false
+    };
+  },
+  created() {
+    if (process.client) {
+      window.addEventListener("scroll", this.handleScroll);
+    }
+  },
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+  },
+  methods: {
+    handleScroll(event) {
+      const screenHeight = process.client ? window.innerHeight : 0;
+
+      if (window.scrollY > screenHeight && !this.scrolledDown) {
+        this.scrolledDown = true;
+      }
+
+      if (window.scrollY < screenHeight && this.scrolledDown) {
+        this.scrolledDown = false;
+      }
+    }
   }
 };
 </script>
@@ -30,6 +58,10 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.wrapper.scrolledDown {
+  background: white;
 }
 
 .wrapper-inner {

@@ -3,7 +3,7 @@
     id="navmenu"
     class="nav-menu"
     v-scroll-spy-active
-    v-scroll-spy-link="{ offset: -1 }"
+    v-scroll-spy-link="{ offset: 72 }"
   >
     <a class="nav-button">Home</a>
     <a class="nav-button">About</a>
@@ -34,7 +34,7 @@ export default {};
   border: 0;
   padding: 0;
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-family: Poppins;
   font-weight: 800;
   text-transform: uppercase;

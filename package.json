@@ -20,6 +20,7 @@
     "nuxt-fontawesome": "^0.4.0",
     "vue-animate-scroll": "^0.1.5",
     "vue-carousel": "^0.18.0",
+    "vue-scrollto": "^2.17.1",
     "vue2-animate": "^2.1.3",
     "vue2-scrollspy": "^2.3.1"
   },
