@@ -1,7 +1,7 @@
 <template>
   <div class="home-wrapper">
     <div class="left-wrapper"></div>
-    <img class="banner-img" src="/images/hello.png" />
+    <img class="banner-img" src="/images/hello2.png" />
     <div class="banner-link">
       <HomeScrollButton />
     </div>
@@ -83,7 +83,7 @@ export default {
 .banner-img {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: calc(50% - 5px);
   width: 68%;
   transform: translate(-50%, -50%) scale(1);
   animation: slidein 0.5s linear;

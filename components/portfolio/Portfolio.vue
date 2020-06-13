@@ -45,7 +45,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh + 72px);
+  min-height: calc(100vh + 72px);
   position: relative;
 
   @media (min-width: $screenWidthXxxl) {

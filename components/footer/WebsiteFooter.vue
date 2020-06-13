@@ -25,7 +25,7 @@
               Portfolio
             </a>
             <a class="footer__link">
-              Contact
+              Wallpapers
             </a>
           </div>
         </div>

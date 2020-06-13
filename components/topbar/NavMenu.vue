@@ -8,7 +8,7 @@
     <a class="nav-button">Home</a>
     <a class="nav-button">About</a>
     <a class="nav-button">Portfolio</a>
-    <a class="nav-button">Contact</a>
+    <a class="nav-button">Wallpapers</a>
   </div>
 </template>
 

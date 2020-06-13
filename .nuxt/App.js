@@ -21,7 +21,7 @@ import _6f6c098b from '../layouts/default.vue'
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"Frontend Joe","bodyAttrs":{"data-spy":"scroll"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My dandy Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Poppins:400,600,800,900&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Material+Icons|Material+Icons+Outlined"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fvue2-animate\u002Fdist\u002Fvue2-animate.min.css"}],"style":[],"script":[]},
+  head: {"title":"Frontend Joe","bodyAttrs":{"data-spy":"scroll"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Official Website Of @frontendjoe"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Poppins:400,600,800,900&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Material+Icons|Material+Icons+Outlined"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fvue2-animate\u002Fdist\u002Fvue2-animate.min.css"}],"style":[],"script":[]},
 
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })

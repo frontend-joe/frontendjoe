@@ -15,7 +15,7 @@
         <Portfolio />
       </section>
       <section>
-        <Contact />
+        <Wallpapers />
       </section>
     </div>
     <WebsiteFooter />
@@ -28,7 +28,7 @@ import Home from "../components/home/Home";
 import About from "../components/about/About";
 import AboutSplit from "../components/aboutSplit/About";
 import Portfolio from "../components/portfolio/Portfolio";
-import Contact from "../components/contact/Contact";
+import Wallpapers from "@/components/wallpapers/Wallpapers";
 import WebsiteFooter from "../components/footer/WebsiteFooter";
 
 export default {
@@ -38,7 +38,7 @@ export default {
     About,
     AboutSplit,
     Portfolio,
-    Contact,
+    Wallpapers,
     WebsiteFooter
   }
 };

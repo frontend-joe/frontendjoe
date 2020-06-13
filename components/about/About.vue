@@ -72,6 +72,10 @@ export default {
 <style lang="scss">
 @import "assets/scss/variables";
 
+.VueCarousel-slide {
+  max-width: 100%;
+}
+
 .about-wrapper {
   min-height: 100vh;
   position: relative;

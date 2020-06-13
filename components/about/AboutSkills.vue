@@ -52,6 +52,11 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding: 2rem 0;
+
+  @media (min-width: $screenWidthMd) {
+    padding: 0;
+  }
 }
 
 .skills-subtitle {
