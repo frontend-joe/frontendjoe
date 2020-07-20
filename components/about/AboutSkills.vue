@@ -1,22 +1,40 @@
 <template>
-  <div class="wrapper">
-    <div class="about-subtitle">
-      Skills
-    </div>
-    <div class="skills-subtitle">
-      Development
-    </div>
-    <div class="skills-list">
-      <div class="skills-list-item" v-for="skill in devSkills" :key="skill">
-        {{ skill }}
-      </div>
-    </div>
-    <div class="skills-subtitle">
-      Design
-    </div>
-    <div class="skills-list">
-      <div class="skills-list-item" v-for="skill in designSkills" :key="skill">
-        {{ skill }}
+  <div class="row">
+    <div class="col-sm-12 offset-md-2 col-md-8">
+      <div class="wrapper">
+        <div class="about-subtitle">
+          Skills
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="skills-subtitle">
+              Development
+            </div>
+            <div class="skills-list">
+              <div
+                class="skills-list-item"
+                v-for="skill in devSkills"
+                :key="skill"
+              >
+                {{ skill }}
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="skills-subtitle">
+              Design
+            </div>
+            <div class="skills-list last">
+              <div
+                class="skills-list-item"
+                v-for="skill in designSkills"
+                :key="skill"
+              >
+                {{ skill }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,15 +48,23 @@ export default {
         "React",
         "Vue",
         "Angular",
+        "React Native",
         "Node",
         "HTML",
         "CSS",
         "SCSS",
         "Git",
-        "Styled Components",
-        "React Native"
+        "Styled Components"
       ],
-      designSkills: ["Sketch", "Figma", "Adobe XD", "Illustrator", "Photoshop"]
+      designSkills: [
+        "Sketch",
+        "Figma",
+        "Adobe XD",
+        "Illustrator",
+        "Photoshop",
+        "InVision",
+        "After Effects"
+      ]
     };
   }
 };
@@ -50,42 +76,53 @@ export default {
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 2rem 0;
 
   @media (min-width: $screenWidthMd) {
     padding: 0;
+    align-items: flex-start;
   }
 }
 
 .skills-subtitle {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 800;
   color: $colorPrimary;
   margin-bottom: 0.75rem;
+  text-align: center;
+
+  @media (min-width: $screenWidthMd) {
+    text-align: left;
+    font-size: 0.875rem;
+  }
 }
 
 .skills-list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 2rem;
+  width: 60%;
+  margin: 0 auto 2rem;
+
+  &.last {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $screenWidthMd) {
-    width: 258px;
-    max-width: 258px;
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 
 .skills-list-item {
-  height: 50px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
-  padding: 0 0.25rem;
+  height: 40px;
+  font-size: 0.975rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  padding: 0.5rem 0.25rem 0;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);

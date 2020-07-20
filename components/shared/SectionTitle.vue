@@ -6,7 +6,6 @@
     <div class="section-title__description">
       {{ description }}
     </div>
-    <div class="section-title__border" />
   </div>
 </template>
 
@@ -48,7 +47,7 @@ export default {
   font-size: 2.25rem;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.325rem;
 
   @media (min-width: $screenWidthMd) {
     text-align: left;
@@ -56,16 +55,9 @@ export default {
 }
 
 .section-title__description {
-  font-size: 0.875rem;
+  font-size: 1.175rem;
   font-weight: 800;
-  color: rgba(0, 0, 0, 0.57);
-  margin-bottom: 1.25rem;
+  color: rgba(0, 0, 0, 0.29);
   text-align: center;
-}
-
-.section-title__border {
-  width: 65px;
-  height: 3px;
-  background: $colorPrimary;
 }
 </style>

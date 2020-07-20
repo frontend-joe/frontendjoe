@@ -38,6 +38,13 @@ export default {};
 @import "assets/scss/variables.scss";
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $screenWidthMd) {
+    align-items: flex-start;
+  }
 }
 
 .language-row {
@@ -49,7 +56,8 @@ export default {};
 .language-block {
   display: flex;
   flex-direction: column;
-  width: 130px;
+  flex: 1 1 120px;
+  width: 120px;
 }
 
 .language-block__title {
@@ -66,13 +74,14 @@ export default {};
 }
 
 .progress-wrapper {
-  flex: 1;
+  flex: 1 1 auto;
+  width: 130px;
   background: #e0e0e0;
   border-radius: 10px;
 }
 
 .progress-bar {
-  height: 1rem;
+  height: 0.5rem;
   border-radius: 0.5rem;
   background: $colorPrimary;
 }

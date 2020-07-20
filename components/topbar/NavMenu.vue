@@ -5,15 +5,26 @@
     v-scroll-spy-active
     v-scroll-spy-link="{ offset: 72 }"
   >
-    <a class="nav-button">Home</a>
-    <a class="nav-button">About</a>
-    <a class="nav-button">Portfolio</a>
-    <a class="nav-button">Wallpapers</a>
+    <a :style="{ color: getFontColor }" class="nav-button">Home</a>
+    <a :style="{ color: getFontColor }" class="nav-button">About</a>
+    <a :style="{ color: getFontColor }" class="nav-button">Portfolio</a>
+    <a :style="{ color: getFontColor }" class="nav-button">Wallpapers</a>
   </div>
 </template>
 
 <script>
-export default {};
+import { rgba } from "polished";
+
+export default {
+  props: {
+    fontColor: String
+  },
+  computed: {
+    getFontColor() {
+      return rgba(this.fontColor, 0.75);
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -36,13 +47,14 @@ export default {};
   margin: 0;
   font-size: 0.875rem;
   font-family: Poppins;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   margin-right: 1rem;
+  color: white;
   transition: color 0.25s;
 
   &.active {
-    color: $colorPrimary;
+    color: $colorPrimary !important;
   }
 
   &:last-child {

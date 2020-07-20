@@ -1,8 +1,11 @@
 {
   "entry": "server.js",
   "files": {
-    "eb227b6e8bce2c720a85.js": "eb227b6e8bce2c720a85.js",
+    "pages/index.js": "pages/index.js",
     "server.js": "server.js"
   },
-  "maps": {}
+  "maps": {
+    "pages/index.js": "pages/index.js.map",
+    "server.js": "server.js.map"
+  }
 }

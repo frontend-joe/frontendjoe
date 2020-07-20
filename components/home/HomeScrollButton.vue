@@ -1,11 +1,11 @@
 <template>
   <a class="home-scroll-button" v-scroll-to="'#about'">
-    <div class="home-scroll-button__inner">
+    <span class="home-scroll-button__inner">
       <MatIcon>arrow_downward</MatIcon>
-      <div class="home-scroll-button__text">
+      <span class="home-scroll-button__text">
         Scroll down
-      </div>
-    </div>
+      </span>
+    </span>
   </a>
 </template>
 
@@ -37,14 +37,26 @@ export default {
 }
 
 .home-scroll-button {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-block;
-  color: $colorPrimary;
+  color: rgba(white, 0.99);
   padding: 1rem;
+
+  @media (max-width: $screenWidthSm) {
+    display: none;
+  }
 }
 
 .home-scroll-button__inner {
   display: flex;
   align-items: center;
+  justify-content: center;
   animation: bob 2s infinite ease-in-out;
 }
 

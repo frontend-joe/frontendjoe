@@ -50,8 +50,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: "~/plugins/vue2-scrollspy", ssr: false },
-    { src: "~/plugins/vue-carousel", ssr: false },
+    { src: "~/plugins/vue2-scrollspy", mode: "client", ssr: false },
+    { src: "~/plugins/vue-carousel", mode: "client", ssr: false },
     { src: "~/plugins/fontawesome.js" },
     { src: "~/plugins/vue-animate-scroll.js" },
     { src: "~/plugins/vue-scrollto.js" }
@@ -64,34 +64,35 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    "nuxt-fontawesome",
+    "nuxt-fontawesome"
     //OR like this
-    [
-      "nuxt-fontawesome",
-      ["vue-scrollto/nuxt", { duration: 300 }]
-      // {
-      //   component: "fa",
-      //   imports: [
-      //     //import whole set
-      //     {
-      //       set: "@fortawesome/free-solid-svg-icons",
-      //       icons: ["fas"]
-      //     },
-      //     //import 2 icons from set
-      //     // please note this is PRO set in this example,
-      //     // you must have it in your node_modules to actually import
-      //     {
-      //       set: "@fortawesome/pro-regular-svg-icons",
-      //       icons: ["faAdjust", "faArchive"]
-      //     }
-      //   ]
-      // }
-    ]
+    //[
+    // "nuxt-fontawesome",
+    // ["vue-scrollto/nuxt", { duration: 300 }]
+    // {
+    //   component: "fa",
+    //   imports: [
+    //     //import whole set
+    //     {
+    //       set: "@fortawesome/free-solid-svg-icons",
+    //       icons: ["fas"]
+    //     },
+    //     //import 2 icons from set
+    //     // please note this is PRO set in this example,
+    //     // you must have it in your node_modules to actually import
+    //     {
+    //       set: "@fortawesome/pro-regular-svg-icons",
+    //       icons: ["faAdjust", "faArchive"]
+    //     }
+    //   ]
+    // }
+    //]
   ],
   /*
    ** Build configuration
    */
   build: {
+    transpile: ["vue-carousel"],
     /*
      ** You can extend webpack config here
      */

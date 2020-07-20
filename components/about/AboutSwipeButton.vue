@@ -46,7 +46,6 @@ export default {
 }
 
 .button {
-  cursor: move;
   background: transparent;
   display: flex;
   align-items: center;

@@ -24,7 +24,7 @@
 
 <script>
 import Topbar from "../components/topbar/Topbar";
-import Home from "../components/home/Home";
+import Home from "../components/home/HomeWallpaper";
 import About from "../components/about/About";
 import AboutSplit from "../components/aboutSplit/About";
 import Portfolio from "../components/portfolio/Portfolio";

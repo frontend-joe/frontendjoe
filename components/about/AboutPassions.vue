@@ -38,6 +38,15 @@ export default {
 @import "assets/scss/variables.scss";
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @media (min-width: $screenWidthMd) {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
 
 .passions-row {
@@ -51,9 +60,9 @@ export default {
 }
 
 .passions-text {
-  color: $colorSubtitle;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.975rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
   margin-left: 0.75rem;
 }
 </style>

@@ -1,51 +1,69 @@
 <template>
   <div id="about" class="about-wrapper">
-    <div v-animate="'slide-up'">
-      <carousel :per-page="1" :loop="true" :paginationEnabled="false">
+    <!-- <div v-animate="'slide-up'"> -->
+    <client-only>
+      <carousel :per-page="1" :paginationEnabled="false">
         <slide>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-5 styled-left">
-                <div class="about-img-wrapper">
-                  <img class="about-img" src="/images/joe.png" />
-                </div>
-              </div>
-              <div class="col-md-7 styled-col">
-                <div class="about-right">
-                  <SectionTitle
-                    title="I'm Joe"
-                    description="Frontend Developer"
-                  />
-                  <div class="about-text">
-                    Through innovation, passion and expertise, I produce
-                    aesthetic software to the highest standard. My favourite
-                    libraries are React, Vue and Styled Components. However, I'm
-                    largely technology agnostic and love to learn new tricks.
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 offset-md-2 col-md-8">
+                  <div class="row">
+                    <div class="order-2 order-md-1 col-md-8 styled-left">
+                      <div class="about-right">
+                        <SectionTitle
+                          title="Hi, I'm Joe"
+                          description="Frontend Developer"
+                        />
+                        <div class="about-text">
+                          Through constant learning and creation, I produce
+                          aesthetic software to the highest standard. I’m
+                          largely framework agnostic but technologies I love
+                          right now are React, Vue and Styled Components.
+                        </div>
+                        <AboutSwipeButton />
+                      </div>
+                    </div>
+                    <div class="order-1 order-md-2 col-md-4 styled-col">
+                      <div class="about-img-wrapper">
+                        <img class="about-img" src="/images/joe.png" />
+                      </div>
+                    </div>
                   </div>
-                  <AboutSwipeButton />
                 </div>
               </div>
             </div>
           </div>
         </slide>
         <slide>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <AboutSkills />
-              </div>
-              <div class="col-md-4">
-                <AboutPassions />
-              </div>
-              <div class="col-md-4">
-                <AboutLanguages />
+          <div>
+            <div class="container">
+              <AboutSkills />
+            </div>
+          </div>
+        </slide>
+        <slide>
+          <div>
+            <div class="container">
+              <div class="row">
+                <div class="offset-md-2 col-md-8">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <AboutPassions />
+                    </div>
+                    <div class="col-md-6">
+                      <AboutLanguages />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </slide>
       </carousel>
-      <!-- <AboutCircles /> -->
-    </div>
+    </client-only>
+    <!-- <AboutCircles /> -->
+    <!-- </div> -->
   </div>
 </template>
 
@@ -77,23 +95,25 @@ export default {
 }
 
 .about-wrapper {
-  min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
 
-  @media (min-width: $screenWidthMd) {
-    padding: 0;
+  @media (min-width: $screenWidthXs) {
+    // padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 .about-subtitle {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 2.5rem;
+
+  @media (min-width: $screenWidthMd) {
+    font-size: 1.5rem;
+  }
 }
 
 .styled-left {
@@ -112,14 +132,16 @@ export default {
 
 .about-text {
   font-size: 0.975rem;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
   line-height: 1.625;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  width: 60%;
 
   @media (min-width: $screenWidthMd) {
     text-align: left;
+    width: auto;
   }
 }
 
@@ -140,14 +162,16 @@ export default {
 .about-img-wrapper {
   border-radius: 50%;
   width: 40%;
+  margin: 2rem auto 2rem;
 
   @media (min-width: $screenWidthMd) {
+    margin-bottom: 0;
     background: #e7e7e7;
     width: 200px;
     height: 200px;
 
     &:hover img {
-      transform: translate(2rem, -2rem);
+      transform: translate(1rem, -1rem);
     }
   }
 }
@@ -156,6 +180,16 @@ export default {
   margin: 0;
   padding: 0;
   width: 100%;
+  transform: translate(0.5rem, -0.5rem);
   transition: transform 0.5s ease-in-out;
+}
+
+.VueCarousel-wrapper {
+  padding: 3rem 0;
+
+  @media (min-width: $screenWidthMd) {
+    padding: 8rem 0;
+    cursor: move;
+  }
 }
 </style>

@@ -1,26 +1,30 @@
 <template>
-  <div class="wrapper" :class="{ scrolledDown: scrolledDown }">
+  <div
+    class="wrapper"
+    :class="{
+      scrolledDown: scrolledDown,
+      scrolledOverBanner: scrolledOverBanner
+    }"
+  >
     <div class="wrapper-inner">
-      <Logo />
-      <NavMenu />
+      <NavMenu
+        :fontColor="!scrolledDown || scrolledOverBanner ? 'white' : '#0f0f0f'"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Logo from "./Logo";
 import NavMenu from "./NavMenu";
-import DownloadButton from "./DownloadButton";
 
 export default {
   components: {
-    NavMenu,
-    Logo,
-    DownloadButton
+    NavMenu
   },
   data() {
     return {
-      scrolledDown: false
+      scrolledDown: false,
+      scrolledOverBanner: false
     };
   },
   created() {
@@ -35,14 +39,25 @@ export default {
   },
   methods: {
     handleScroll(event) {
-      const screenHeight = process.client ? window.innerHeight : 0;
+      const topbarHeight = 72;
+      const bannerHeight = document.getElementById("home-banner").clientHeight;
 
-      if (window.scrollY > screenHeight && !this.scrolledDown) {
+      //console.log("bannerHeight", bannerHeight);
+
+      const screenHeight = process.client ? window.innerHeight : 0;
+      if (window.scrollY > topbarHeight && !this.scrolledDown) {
         this.scrolledDown = true;
       }
 
-      if (window.scrollY < screenHeight && this.scrolledDown) {
+      if (window.scrollY < bannerHeight && this.scrolledDown) {
+        this.scrolledOverBanner = true;
+      } else {
+        this.scrolledOverBanner = false;
+      }
+
+      if (window.scrollY <= topbarHeight && this.scrolledDown) {
         this.scrolledDown = false;
+        this.scrolledOverBanner = false;
       }
     }
   }
@@ -58,16 +73,25 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  transition: background 0.35s;
+
+  @media (max-width: $screenWidthMd) {
+    display: none;
+  }
 }
 
 .wrapper.scrolledDown {
   background: white;
 }
 
+.wrapper.scrolledOverBanner {
+  background: black;
+}
+
 .wrapper-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 72px;
   padding: 0 1.5rem;
 
