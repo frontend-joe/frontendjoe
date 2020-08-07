@@ -10,13 +10,13 @@
           />
           <div class="row">
             <div
-              class="col-sm-6"
+              class="col-xs-12 col-sm-6 col-md-12 col-lg-6"
               v-for="image in wallpapers"
               :key="image.imagePath"
             >
               <a
                 download
-                class="wallpaper-a"
+                class="wallpaper-a d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block"
                 :style="{ display: 'block', paddingBottom: '4rem' }"
                 :href="
                   `http://frontendjoe.com/images/wallpapers/${image.imagePath}`
@@ -24,18 +24,6 @@
                 target="_blank"
               >
                 <WallpaperCard
-                  class="d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block"
-                  :imagePath="image.imagePath"
-                  :cardTitle="
-                    image.imagePath
-                      .split('.')
-                      .slice(0, -1)
-                      .join('.')
-                  "
-                  :cardSubtitle="image.created"
-                />
-                <WallpaperCardMobile
-                  class="d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"
                   :imagePath="image.imagePath"
                   :cardTitle="
                     image.imagePath
@@ -46,6 +34,18 @@
                   :cardSubtitle="image.created"
                 />
               </a>
+
+              <WallpaperCardMobile
+                class="d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"
+                :imagePath="image.imagePath"
+                :cardTitle="
+                  image.imagePath
+                    .split('.')
+                    .slice(0, -1)
+                    .join('.')
+                "
+                :cardSubtitle="image.created"
+              />
             </div>
           </div>
         </div>

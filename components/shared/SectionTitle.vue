@@ -31,7 +31,7 @@ export default {
   flex-direction: column;
   color: $colorText;
 
-  @media (min-width: $screenWidthMd) {
+  @media (min-width: $screenWidthLg) {
     align-items: flex-start;
   }
 }
@@ -49,7 +49,7 @@ export default {
   text-align: center;
   margin-bottom: 0.325rem;
 
-  @media (min-width: $screenWidthMd) {
+  @media (min-width: $screenWidthLg) {
     text-align: left;
   }
 }

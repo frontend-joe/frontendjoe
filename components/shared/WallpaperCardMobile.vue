@@ -1,5 +1,10 @@
 <template>
-  <span class="card" :style="{ backgroundImage: `url(${getCardImage})` }">
+  <span
+    @click="open = !open"
+    class="card"
+    :class="{ open: open }"
+    :style="{ backgroundImage: `url(${getCardImage})` }"
+  >
     <!-- <img :src="getCardImage" class="card__image" /> -->
     <span class="card__content">
       <div>
@@ -10,9 +15,13 @@
           {{ cardSubtitle }}
         </h4>
       </div>
-      <button class="card__content-button">
+      <a
+        download
+        :href="`http://frontendjoe.com/images/wallpapers/${imagePath}`"
+        class="card__content-button"
+      >
         <font-awesome-icon :icon="['fas', 'download']" />
-      </button>
+      </a>
     </span>
   </span>
 </template>
@@ -23,6 +32,11 @@ export default {
     cardTitle: String,
     cardSubtitle: String,
     imagePath: String
+  },
+  data() {
+    return {
+      open: false
+    };
   },
   computed: {
     getCardImage() {
@@ -39,19 +53,15 @@ export default {
   overflow: hidden;
   display: block;
   padding: 0 1.5rem 2rem;
+  margin-bottom: 3rem;
   border-radius: 0.5rem;
   background: white;
-  height: 136px;
+  height: 116px;
   background-size: 150%;
   background-position: center;
   box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.15);
-  transition: background-size 0.35s;
 
-  &:hover {
-    background-size: 160%;
-  }
-
-  &:hover &__content {
+  &.open &__content {
     transform: translateY(0);
   }
 }

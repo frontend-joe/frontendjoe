@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper" id="home-banner">
-    <span>
+    <span :style="{ opacity: logoOpacity, transition: 'all 0.2s' }">
       frontendjoe
     </span>
     <ScrollButton />
@@ -13,6 +13,36 @@ import ScrollButton from "./HomeScrollButton";
 export default {
   components: {
     ScrollButton
+  },
+  data() {
+    return {
+      logoOpacity: 1
+    };
+  },
+  created() {
+    if (process.client) {
+      window.addEventListener("scroll", this.handleScroll);
+    }
+  },
+  destroyed() {
+    if (process.client) {
+      window.removeEventListener("scroll", this.handleScroll);
+    }
+  },
+  methods: {
+    handleScroll(event) {
+      const bannerHeight = document.getElementById("home-banner").clientHeight;
+
+      const threshold = bannerHeight / 2;
+      const scrollY = event.target.scrollingElement.scrollTop;
+
+      const opacity = 1 - scrollY / bannerHeight;
+
+      if (opacity > 0 && opacity <= 1) {
+        this.logoOpacity = opacity - 100;
+        console.log("opacity", this.logoOpacity);
+      }
+    }
   }
 };
 </script>
@@ -25,13 +55,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(white, 0.95);
-  background: url(/images/wallpapers/memphis.png);
 
   font-size: 21px;
   height: 240px;
   background-size: cover;
   background-position: center;
+  color: rgba(white, 0.95);
+  background: url(/images/wallpapers/memphis.png);
 
   @media (min-width: $screenWidthSm) {
     font-size: 24px;

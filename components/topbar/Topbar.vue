@@ -42,9 +42,6 @@ export default {
       const topbarHeight = 72;
       const bannerHeight = document.getElementById("home-banner").clientHeight;
 
-      //console.log("bannerHeight", bannerHeight);
-
-      const screenHeight = process.client ? window.innerHeight : 0;
       if (window.scrollY > topbarHeight && !this.scrolledDown) {
         this.scrolledDown = true;
       }

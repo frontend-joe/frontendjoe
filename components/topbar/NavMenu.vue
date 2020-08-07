@@ -31,25 +31,30 @@ export default {
 @import "assets/scss/variables";
 
 .nav-menu {
+  height: 100%;
   display: none;
 
   @media (min-width: $screenWidthMd) {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 .nav-button {
-  display: inline-block;
+  flex: 1 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
   position: relative;
   background: transparent;
   border: 0;
-  padding: 0;
+  padding: 0 0.5rem;
   margin: 0;
   font-size: 0.875rem;
   font-family: Poppins;
   font-weight: 600;
   text-transform: uppercase;
-  margin-right: 1rem;
   color: white;
   transition: color 0.25s;
 

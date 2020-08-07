@@ -1,6 +1,9 @@
 <template>
   <span class="card">
-    <img :src="getCardImage" class="card__image" />
+    <div
+      :style="{ backgroundImage: `url(${getCardImage})` }"
+      class="card__image"
+    />
     <span class="card__content">
       <div>
         <h3 class="card__content-title">
@@ -49,10 +52,14 @@ export default {
 }
 
 .card__image {
+  height: 150px;
   width: 100%;
   border-radius: 0.5rem;
   box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.15);
   transform: translateY(-1rem);
+  margin-bottom: 0.5rem;
+  background-size: 150%;
+  background-position: center;
   transition: transform 0.35s;
 }
 

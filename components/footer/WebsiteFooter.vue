@@ -94,16 +94,25 @@ export default {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
+
+  @media (min-width: $screenWidthMd) {
+    text-align: left;
+  }
 }
 
 .footer__text {
   font-size: 14px;
   line-height: 1.35;
   color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  width: 60%;
+  text-align: center;
 
   @media (min-width: $screenWidthMd) {
     margin-bottom: 0;
+    width: auto;
+    text-align: left;
   }
 }
 
@@ -132,6 +141,11 @@ export default {
 .footer__iconList {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @media (min-width: $screenWidthMd) {
+    justify-content: flex-start;
+  }
 }
 
 .footer__icon {
@@ -146,6 +160,10 @@ export default {
   cursor: pointer;
   margin-right: 0.5rem;
   transition: color 0.35s;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover {
     color: rgba(255, 255, 255, 0.85);

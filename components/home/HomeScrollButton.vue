@@ -48,7 +48,7 @@ export default {
   color: rgba(white, 0.99);
   padding: 1rem;
 
-  @media (max-width: $screenWidthSm) {
+  @media (max-width: $screenWidthMd) {
     display: none;
   }
 }

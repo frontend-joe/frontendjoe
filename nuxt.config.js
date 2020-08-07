@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: "Frontend Joe",
+    title: "Frontend Joe | Personal Website Of Joe Harrison",
     bodyAttrs: {
       "data-spy": "scroll"
     },

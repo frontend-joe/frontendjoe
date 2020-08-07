@@ -55,7 +55,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Frontend Joe","bodyAttrs":{"data-spy":"scroll"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Official Website Of @frontendjoe"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Poppins:400,600,800,900&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Material+Icons|Material+Icons+Outlined"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fvue2-animate\u002Fdist\u002Fvue2-animate.min.css"}],"style":[],"script":[]},
+    head: {"title":"Frontend Joe | Personal Website Of Joe Harrison","bodyAttrs":{"data-spy":"scroll"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Official Website Of @frontendjoe"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Fimages\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Poppins:400,600,800,900&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Material+Icons|Material+Icons+Outlined"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fvue2-animate\u002Fdist\u002Fvue2-animate.min.css"}],"style":[],"script":[]},
 
     router,
     nuxt: {
